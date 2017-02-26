@@ -1,0 +1,68 @@
+#topicSpan, #videoSpan {
+  font-family: cursive;
+  font-size: 23px;
+}
+
+#topicInput, #videoInput {
+  font-size: 20px;
+}
+
+#submit {
+  display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 21px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-bottom-width: 3px;
+  width: 100px
+}
+
+#submitSpan {
+  font-size: 12px;
+}
+
+.listOfTabs {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+.anchorButton, #anchorButtonPlaylist {
+  padding: 18px 25px 12px 25px;
+  transition: all .2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+/*
+.styled-select {
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+   display: i
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px;  If you add too much padding here, the options won't show in IE
+   width: 268px;
+}
+
+.styled-select.slate {
+   background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+   height: 34px;
+   width: 240px;
+}
+
+.styled-select.slate select {
+   border: 1px solid #ccc;
+   font-size: 16px;
+   height: 34px;
+   width: 268px;
+}
+*/
