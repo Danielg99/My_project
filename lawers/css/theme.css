@@ -1,0 +1,35 @@
+#submit {
+  color: #666;
+	background-color: #eee;
+  border: 1px solid rgba(0,0,0,0.3);
+}
+
+#submit:hover {
+  background-color: #e3e3e3;
+  border-color: rgba(0,0,0,0.5);
+}
+
+.anchorButton, #anchorButtonPlaylist{
+  color: black;
+}
+
+.selected {
+  background-color: #47c9af;
+  color: #ffffff;
+}
+
+.anchorButton:hover {
+  background-color: #47c9af;
+}
+
+#anchorButtonPlaylist:hover{
+  background-color: #47c9af;
+}
+
+.anchorButton:hover li {
+  color: #ffffff;
+}
+
+#anchorButtonPlaylist:hover li {
+  color: #ffffff;
+}
