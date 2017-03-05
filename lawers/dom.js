@@ -38,7 +38,7 @@ function removeTab(topic) {
 function htmlTab(topic){
   return `<div class="case">
   <li class = "listOfTabs"><span class="tab">${topic}</span>
-  </li><input type="file" class="fileInput"></div>`;
+  </li><input type="file" class="fileInput"><div class="fileNames"></div></div>`;
 };
 
 function loadVideos(topic){
@@ -103,7 +103,7 @@ $('.fileInput').change(function () {
   let nameFile = this.value.replace(/C:\\fakepath\\/i, ', ');
   let getFiles = getFilesNames();
   let files = saveFiles(nameFile);
-  $(".case").append(fileHTML(nameFile));
+  $(this).next().append(fileHTML(nameFile));
 });
 
 let fileNames = getFilesNames();
