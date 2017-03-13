@@ -1,23 +1,20 @@
-
 let currentTopic;
 loadTopics();
-selectExistingTab();
 
-$('#form').submit((e)=>{
-  e.preventDefault();
-  let topicValue = $("#topicInput").val().toUpperCase();
+$('#submit').click(function(){
+  let topicValue = $("#topicInput").val();
   let videoValue = $("#videoInput").val();
+  //let date = new date();
+  alert(videoValue);
   saveVideo(topicValue, videoValue);
   loadTopics();
   loadVideos(topicValue);
   currentTopic = topicValue;
-  location.reload();
 });
 
 function tabClick(topic) {
-    loadTopics();
-    loadVideos(topic);
-    currentTopic = topic;
+  loadVideos(topic);
+  currentTopic = topic;
 }
 
 function loadTopics() {
@@ -36,18 +33,14 @@ function removeTab(topic) {
 }
 
 function htmlTab(topic){
-  return `<div class="case">
+  return `<span onclick='tabClick("${topic}");' class = "anchorButton">
   <li class = "listOfTabs"><span class="tab">${topic}</span>
-  </li><input type="file" class="fileInput"><div class="fileNames"></div></div>`;
+  </li><button onclick="removeTab('${topic}');">&#9986;</button></span>`;
 };
 
 function loadVideos(topic){
   let videos = getVideos(topic);
-  $("#videos").append(videos.map(htmlVideo));
-}
-
-function fileHTML(name){
-  return `<span class="fileName">${name}</span>`
+  $("#videos").html(videos.map(htmlVideo));
 }
 
 function removeVideo(id) {
@@ -56,55 +49,19 @@ function removeVideo(id) {
 }
 
 function htmlVideo(id){
-  return `<span class="tab"></span>`;
+  return `<span class="tab"><span>${id}</span><span></span>
+<button onclick="removeVideo('${id}');">&#9986;</button>
+</span>`;
 }
 
 $(".anchorButton").click(function(){
   let selectedTab = $(this).addClass("selected").siblings().removeClass("selected");
 });
 
-function deleteConfirm(id) {
-  let checksIfOKClicked;
-  if (confirm("Are you sure you want to delete this video?") == true) {
-    removeVideo(id);
-  } else {
 
-  }
-}
-
-function deleteConfirmTab(id) {
-  let checksIfOKClicked;
-  if (confirm("Are you sure you want to delete this tab? (Videos won't be saved.)") == true) {
-    removeTab(id);
-  } else {
-
-  }
-}
-
-function HTMLoptionTab(nameOption) {
-  return `<option class="option" value="${nameOption}">${nameOption}</option>`
-}
-
-function selectExistingTab() {
-  let topicsVideos = getTopicsVideos();
-  let size = Object.size(topicsVideos)
-  for(let i=0;i<size;i++){
-    var nameOption = (Object.keys(topicsVideos)[i]);
-    var namekey = HTMLoptionTab(nameOption);
-    $("#selectTopic").append(namekey);
-  }
-}
-
-$('select').on('change', function() {
-  $("#topicInput").val( this.value );
-})
-
-$('.fileInput').change(function () {
-  let nameFile = this.value.replace(/C:\\fakepath\\/i, ', ');
-  let getFiles = getFilesNames();
-  let files = saveFiles(nameFile);
-  $(this).next().append(fileHTML(nameFile));
-});
-
-let fileNames = getFilesNames();
-$(".case").append(getFilesNames);
+/*
+1.ajax
+2.node.js
+3.google app engine
+4.datastore
+*/

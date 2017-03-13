@@ -9,23 +9,20 @@
   <link rel="shortcut icon" href="img/Icon/firstIcon.ico" type="image/x-icon" />
 </head>
 <body>
-  <div id="container">
-      <form id="form">
-        <span id="topicSpan">Name:</span>
-        <input type="text" id="topicInput" required>
-        <select id="selectTopic" name="">
-          <option>select topic</option>
-        </select>
-        <span id="videoSpan">Files:</span>
-        <input type="text" id="videoInput" required>
-        <button class="btn btn-green" id="submit">
-          <span id="submitSpan">Submit</span>
-        </button>
-      </form>
-      <div id="topics"></div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+  <span id="topicSpan">Topic:</span>
+  <input type="text" id="topicInput">
+  <span id="videoSpan">Video URL:</span>
+  <input type="file" id="videoInput">
+  <button class="btn btn-green" id="submit">
+    <span id="submitSpan">Submit</span>
+  </button>
+  <div id="topics"></div>
+  <div id="videos"></div>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
   <script src="storage/storage.js"></script>
   <script src="logic/logic.js"></script>
   <script src="dom.js"></script>
