@@ -1,0 +1,64 @@
+#newPatientFormDiv {
+  display: none;
+}
+
+.patient {
+  cursor: pointer;
+}
+
+.itempass12 {
+    bottom: 0;
+  }
+
+  .pass2 {
+    margin-left: 4px;
+    border-radius: 4px;
+    background: #7b8b8e;
+    width: 25px;
+    height: 2px;
+    transition: .5s;
+  }
+
+  .pass2::after {
+      content: ' ';
+      left: 4px;
+      border-radius: 4px;
+      background: #7b8b8e;
+      width: 25px;
+      height: 2px;
+      position: absolute;
+      margin-top: -13px;
+      transition: .5s;
+  }
+
+  .pass2::before {
+    content: ' ';
+      left: 4px;
+      border-radius: 4px;
+      background: #7b8b8e;
+      width: 25px;
+      height: 2px;
+      position: absolute;
+      margin-top: 13px;
+      transition: .5s;
+  }
+
+.pass2 {
+  width:2px;
+  height:25px;
+  margin-left: 14px;
+}
+
+.pass2::before {
+  margin-top:0px;
+  left:4px;
+  width:2px;
+  height:25px;
+  }
+
+.pass2::after {
+  margin-top:0px;
+  left:25px;
+  width:2px;
+  height:25px;
+  }}
