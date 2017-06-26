@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>You Are Here!</h1>
+  <form class="" action="index.html" method="post">
+    <input type="require">
+    <button type="submit">sub</button>
+  </form>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  $("button").click(function(e) {
+    e.preventDefault();
+    var data = {userName:$("input").val(),val2:{val3:"world"}};
+    let json = JSON.stringify(data);
+    $.ajax({
+      url:"/",
+      type:"POST",
+      dataType: 'json',
+      data:json
+    });
+  })
+  </script>
+</body>
+</html>
